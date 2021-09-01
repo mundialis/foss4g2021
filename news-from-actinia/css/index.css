@@ -112,7 +112,7 @@ hr {
     color: rgb(90, 90, 90);
     font-size: 30px;
     line-height: 1.3;
-    border: solid red 1px;
+    /* border: solid red 1px; */
 }
 
 img {
@@ -367,6 +367,21 @@ div#features #welcome-foss4g {
     right: 13em;
 }
 
+.impress-on-features-interim div#features,
+.impress-on-features-STRDS div#features,
+.impress-on-mapsetsizes div#features,
+.impress-on-features-version div#features,
+.impress-on-geotiff div#features,
+.impress-on-kleinanzeigen div#features,
+.impress-on-openeo div#features,
+.impress-on-amp-self-desc div#features,
+.impress-on-actinia-tpl-crud div#features,
+.impress-on-actinia-tpl-processing div#features,
+.impress-on-projects div#features,
+.impress-on-outlook div#features {
+    opacity: 0.3;
+}
+
 
 /***** features single Slides *****/
 
@@ -481,7 +496,7 @@ div#actinia-tpl p {
 }
 
 div#actinia-tpl-processing img {
-    width: 300px;
+    width: 444px;
 }
 
 
@@ -508,33 +523,31 @@ div#projects .right {
     float: left;
 }
 
-div#projects img {
-    width: 200px
-}
-
 div#projects .flexparent {
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-left: 1em;
 }
 
 div#projects box {
-    width: 200px;
-    border: #e0e0e0 solid 3px;
-    padding: 1em;
-    float: left;
-    width: 28%;
-    min-width: 8em;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    font-size: 1.3em;
-    color: white;
+    flex-grow: 1;
+    height: 100px;
     border: solid #97BF0D 5px;
     padding: 1%;
     margin: 1%;
+    width: 28%;
+    display: flex;
+    text-align: center;
+}
+
+div#projects box p {
+    margin: auto;
+}
+
+div#projects img {
+    width: 100px
 }
 
 

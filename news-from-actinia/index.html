@@ -52,8 +52,8 @@ Monitoring of mapset size of a resource<img class="icon" src="resources/img/circ
 <div><img src="resources/img/buenos_12118A_tiny.jpg"></div>
 <h4><a href="https://github.com/mundialis/actinia_core/releases/tag/1.0.0">actinia 1.0.0 released!</a></h4>
 <p>
-[1.0.0] - 2021-06-02
-Happy Codesprint release :)
+<b>[1.0.0] - 2021-06-02
+Happy Codesprint release :)</b>
 https://github.com/mundialis/actinia_core/projects/1
 </br></br>### Added
 * Get all mapsets locks (#200)
@@ -94,7 +94,7 @@ template management
 </p>
 <hr>
 <h4>actinia in projects</h4>
-<p>FTTH<img class="icon" src="resources/img/circle.png">loose<img class="icon" src="resources/img/circle.png">Hermosa</p>
+<p>FTTH<img class="icon" src="resources/img/circle.png">LOOSE<img class="icon" src="resources/img/circle.png">HERMOSA</p>
 <hr>
 </div>
 </div>
@@ -204,7 +204,7 @@ __Return all iterations with HTTP GET__ `resources/{user_id}/{resource_id}`
 
 __Return specific iteration with HTTP GET__ `resources/{user_id}/{resource_id}/{iteration}`
 </div>
-<div class="step slide markdown features" data-rel-x="0" data-rel-y="20000" data-scale="20">
+<div id="features-STRDS" class="step slide markdown features" data-rel-x="0" data-rel-y="20000" data-scale="20">
 #### Add support for STRDS export (#236) [1.1.0]
 
 * add option to export STRDS for ephemeral processing
@@ -284,36 +284,39 @@ __Return specific iteration with HTTP GET__ `resources/{user_id}/{resource_id}/{
 ---
 </div>
 
-<div class="step slide markdown features" data-rel-x="0" data-rel-y="20000" data-scale="20">
+<div id="features-version" class="step slide markdown features" data-rel-x="0" data-rel-y="20000" data-scale="20">
 #### Enhance version output (#132) [0.99.18]
 
 * enhanced `/version` endpoint
 * GRASS GIS version now included
 * version of installed plugins included
+* python version included
 ---
-        {
+    {
         "grass_version": {
-            "build_date": "2020-12-16",
+            "build_date": "2021-07-14",
             "build_off_t_size": "8",
             "build_platform": "x86_64-pc-linux-musl",
-            "date": "2020",
+            "date": "2021",
             "gdal": "3.1.4",
             "geos": "3.8.1",
-            "libgis_date": "2020-12-16T13:21:23+00:00",
-            "libgis_revision": "2020-12-16T13:21:23+00:00",
+            "libgis_date": "2021-07-14T00:59:27+00:00",
+            "libgis_revision": "2021-07-14T00:59:27+00:00",
             "proj": "7.0.1",
-            "revision": "exported",
+            "revision": "23a8e6d",
             "sqlite": "3.32.1",
-            "version": "7.8.5dev"
+            "version": "8.0.dev"
         },
         "plugin_versions": {
-            "actinia_gdi": "0.1.11",
-            "actinia_satellite_plugin": "0.0.2",
-            "actinia_statistic_plugin": "0.0.2"
+            "actinia_metadata_plugin": "1.0.0",
+            "actinia_module_plugin": "2.2.0",
+            "actinia_satellite_plugin": "0.0.3",
+            "actinia_statistic_plugin": "0.0.3"
         },
-        "plugins": "actinia_statistic_plugin,actinia_satellite_plugin,actinia_gdi",
-        "version": "0.99.17"
-        }
+        "plugins": "actinia_statistic_plugin,actinia_satellite_plugin,actinia_metadata_plugin,actinia_module_plugin",
+        "python_version": "3.8.5 (default, Jul 20 2020, 23:11:29) - [GCC 9.3.0]",
+        "version": "1.0.3.79"
+    }
 
 
 </div>
@@ -347,16 +350,16 @@ __Return specific iteration with HTTP GET__ `resources/{user_id}/{resource_id}/{
 <hr>
 <p>enhance exporter (overviews #66, LZW compression #85, COG support #108, default vector GPKG #157)</p>
 <hr>
-<img id="cross" src="resources/img/cross.png"><p>actinia-gdi <br> EOL, refactored to actinia-module-plugin and actinia-metadata-plugin</p>
-<hr>
-
-<p>Quality enhancements (improve tests, lint, security check - CodeQL), more security in response with webhook (#163)</p>
-<hr>
+<img id="cross" src="resources/img/cross.png"><p>actinia-gdi</p>
 <p>Split actinia-gdi into multiple plugins [0.99.22]</p>
 <ul><li><a href="https://github.com/mundialis/actinia-module-plugin">actinia-module-plugin</a></li>
 <li><a href="https://github.com/mundialis/actinia-metadata-plugin">actinia-metadata-plugin</a></li>
 <li><a href="https://github.com/mundialis/actinia-gdi">actinia-gdi, EOL</a></li>
 </ul>
+
+<hr>
+
+<p>Quality enhancements (improve tests, lint, security check - CodeQL), more security in response with webhook (#163)</p>
 <hr>
 <p>ace, importer, exporter: move out to separate repos (#160) [0.99.26]</p>
 <ul><li><a href="https://github.com/mundialis/ace">ace</a></li>
@@ -386,7 +389,7 @@ __Return specific iteration with HTTP GET__ `resources/{user_id}/{resource_id}/{
 ![openEO webeditor](resources/img/openeo.png)
 </div>
 
-<div class="step slide markdown feature features-elements-inline" data-rel-x="0" data-rel-y="30000" data-scale="20">
+<div id="amp-self-desc" class="step slide markdown feature features-elements-inline" data-rel-x="0" data-rel-y="26000" data-scale="20">
 
 #### actinia-module-plugin self-description
 
@@ -450,8 +453,8 @@ __Return specific iteration with HTTP GET__ `resources/{user_id}/{resource_id}/{
 
 </div>
 
-<!-- FEATURES COLUMN 3 (PAGE 2)#######################################################################-->
-<div id="actinia-tpl" class="step slide features features-elements-inline" data-x="185100" data-y="-25000" data-scale="20">
+<!-- FEATURES COLUMN 4 (PAGE 2)#######################################################################-->
+<div id="actinia-tpl" class="step slide features features-elements-inline" data-x="185100" data-y="-29000" data-scale="20">
 
 <h4>actinia-module-plugin template management - templates</h4>
 <div class="left">
@@ -554,7 +557,6 @@ __Return specific iteration with HTTP GET__ `resources/{user_id}/{resource_id}/{
                         "value": "1.0"
                     }
                 ],
-                "flags": "a",
                 "outputs": [
                     {
                         "export": {
@@ -564,7 +566,8 @@ __Return specific iteration with HTTP GET__ `resources/{user_id}/{resource_id}/{
                         "param": "slope",
                         "value": "{{ elevation_map }}_myslope"
                     }
-                ]
+                ],
+                "flags": "a"
             }
         ],
         "version": "1"
@@ -574,14 +577,15 @@ __Return specific iteration with HTTP GET__ `resources/{user_id}/{resource_id}/{
 </div>
 </div>
 
-<div class="step slide markdown features pre-large" data-rel-x="0" data-rel-y="22000" data-scale="20">
+<div id="actinia-tpl-crud" class="step slide markdown features pre-large" data-rel-x="0" data-rel-y="22000" data-scale="20">
 
 #### actinia-module-plugin template management - CRUD
 you can now create, read, update and delete templates via HTTP REST API
 
     curl -u XXX -X POST -H "Content-Type: application/json" -d "${JSON}" https://actinia-dev.mundialis.de/api/v1/actinia_templates
-    curl -u XXX -X PUT -H "Content-Type: application/json" -d "${JSON}" https://actinia-dev.mundialis.de/api/v1/actinia_templates/elevation_demo
     curl -u XXX -X GET https://actinia-dev.mundialis.de/api/v1/actinia_templates/elevation_demo
+    curl -u XXX -X PUT -H "Content-Type: application/json" -d "${JSON}" https://actinia-dev.mundialis.de/api/v1/actinia_templates/elevation_demo
+    curl -u XXX -X DELETE https://actinia-dev.mundialis.de/api/v1/actinia_templates/elevation_demo
 
 #### It is now also available in the modules:
 
@@ -623,10 +627,6 @@ Lets try our template in a process! - We use this JSON file as HTTP postbody:
                         {
                             "param": "elevation_map",
                             "value": "elevation"
-                        },
-                        {
-                            "param": "datatype",
-                            "value": "FCELL"
                         }
                     ]
                 }
@@ -646,57 +646,64 @@ Lets try our template in a process! - We use this JSON file as HTTP postbody:
 
 </div>
 
+<!-- PROJECTS #######################################################################-->
+<div class="step slide" data-x="130100" data-y="0" data-scale="100" data-z="1">
+</div>
 
 <div id="projects" class="step slide" data-x="155100" data-y="30000" data-scale="28">
 <h4>actinia in projects</h4>
 
 <div class="left">
-<p>FTTH</p>
+<h3>FTTH</h3>
 <ul><li>"Fibre to the home"</li>
-<li>by Telekom</li>
+<li>Project with Deutsche Telekom</li>
 <li>Development of customized processes (Calculation of automated Orthophoto Classification and Potential Trenches) with GRASS GIS and actinia</li>
 </ul>
 <div class="flexparent">
-<img src="resources/img/actinia-grass.svg">
-<box>actinia-gdi</box>
-<box>FME</box>
-<box>terraformer/steep</box>
+<box><p>FME</p></box>
+<box><p>steep</p></box>
+<box><p>actinia-gdi</p></box>
+<box><img src="resources/img/actinia-grass.svg"></box>
 </div>
 </div>
 
 <div class="center">
-<p>loose</p>
-<ul><li>by ESA</li>
+<h3>LOOSE</h3>
+<ul>
+<li>Technologies for the management of long EO data time series</li>
+<li>Supported by ESA</li>
 <li>Technology project with multiple participants</li>
 <li>Processing of certain processes with Sentinel data with GRASS GIS and actinia via openEO API</li>
 </ul>
 <div class="flexparent">
-<img src="resources/img/actinia-grass.svg">
-<box>openeo-grassgis-driver</box>
-<box>openeo-web-editor</box>
-<box>STAC</box>
+<box><p>STAC</p></box>
+<box><p>openeo-web-editor</p></box>
+<box><p>openeo-grassgis-driver</p></box>
+<box><img src="resources/img/actinia-grass.svg"></box>
 </div>
 </div>
 
 <div class="right">
-<p>Hermosa</p>
-<ul><li>by ESA</li>
+<h3>HERMOSA</h3>
+<ul>
+<li>Holistic Ecosystem Restoration Monitoring, repOrting, Sharing and mArketplace</li>
+<li>Supported by ESA</li>
 <li>with terrestris</li>
 <li>Develpment of customized processes (Automated Sentinel-1,Sentinel-2 and VHR Classification)</li>
-<li>Processing is started manually with dedicated web client</li>
+<li>Processing is started manually via web client</li>
 </ul>
 <div class="flexparent">
-<img src="resources/img/actinia-grass.svg">
-<box>SHOGun</box>
-<box>openeo-web-editor</box>
-<box>react-geo</box>
+<box><p>react-geo</p></box>
+<box><p>SHOGun</p></p></box>
+<box><img src="resources/img/actinia-grass.svg"></box>
+<box><p>GeoServer</p></box>
 </div>
 </div>
 
 </div>
 
 
-
+<!-- OUTLOOK #######################################################################-->
 <div id="outlook" class="step slide features" data-x="190100" data-y="35000" data-scale="10">
 <h2>Outlook</h2>
 <img alt="Logo OSGeo" src="resources/img/logo-osgeo.svg">
@@ -704,7 +711,7 @@ Lets try our template in a process! - We use this JSON file as HTTP postbody:
 <hr>
 
 <div class="left">
-<p>Upcoming</p>
+<h4>Upcoming</h4>
 <ul><li>STAC integration</li>
 <li>Allow user authentication via keycloak</li>
 <li>Restructure modules thematically</li>
@@ -712,9 +719,9 @@ Lets try our template in a process! - We use this JSON file as HTTP postbody:
 <li>allow usage of job distributor</li>
 <li>...</li></ul>
 </div>
-<div class="right">
-<p>Related links on GitHub</p>
 
+<div class="right">
+<h4>Related links on GitHub</h4>
 <ul>
 <li><a href="https://github.com/mundialis/actinia_core">actinia_core</a></li>
 <li><a href="https://github.com/mundialis/actinia-module-plugin/">actinia-module-plugin</a></li>
@@ -732,7 +739,7 @@ Lets try our template in a process! - We use this JSON file as HTTP postbody:
 </div>
 
 
-
+<!-- THE END #######################################################################-->
 <div id="overview" class="step" data-x="80000" data-y="4000" data-scale="180" style="pointer-events: none;" data-rotate="5">
 
 <h1>Thank You!</h1>
